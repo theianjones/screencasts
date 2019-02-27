@@ -1,10 +1,12 @@
 import React from "react";
 
 function App() {
+  const result = null;
+
   return (
     <div>
       <h1>egghead courses</h1>
-      {result.data && (
+      {result && result.data && (
         <ul style={{ listStyle: "none" }}>
           {result.data.courses.map(({ title, square_cover_url, slug }) => (
             <li
@@ -12,13 +14,14 @@ function App() {
               style={{
                 display: "flex",
                 alignItems: "center",
-                fontSize: 24,
-                fontFamily: "sans-serif"
+                fontSize: 16,
+                fontFamily: "sans-serif",
+                marginBottom: 10
               }}
             >
               <img
                 src={square_cover_url}
-                alt="course image"
+                alt="course"
                 width="80"
                 height="80"
                 style={{

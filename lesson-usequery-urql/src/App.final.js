@@ -33,17 +33,18 @@ function App() {
               style={{
                 display: "flex",
                 alignItems: "center",
-                fontSize: 24,
-                fontFamily: "sans-serif"
+                fontSize: 16,
+                fontFamily: "sans-serif",
+                marginBottom: 10
               }}
             >
               <img
                 src={square_cover_url}
-                alt="course image"
-                width="80"
-                height="80"
+                alt="course"
+                width="50"
+                height="50"
                 style={{
-                  marginRight: 20
+                  marginRight: 10
                 }}
               />
               {title}
