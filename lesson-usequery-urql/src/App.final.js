@@ -1,59 +1,48 @@
-import React from "react";
-import { useQuery } from "urql";
+import React from 'react'
+import {useQuery} from 'urql'
 
 const courseQuery = `
-  query Courses {
+  query courses {
     courses {
       title
-      square_cover_url
-      slug
     }
   }
-`;
+`
 
 function App() {
   const [result] = useQuery({
-    query: courseQuery
-  });
+    query: courseQuery,
+  })
 
   if (result.fetching) {
-    return "Loading...";
+    return 'Loading...'
   } else if (result.error) {
-    return `There was an error: ${result.error}`;
+    return 'There was an error :('
   }
 
   return (
     <div>
       <h1>egghead courses</h1>
-      {result.data && (
-        <ul style={{ listStyle: "none" }}>
-          {result.data.courses.map(({ title, square_cover_url, slug }) => (
+      {result && result.data && (
+        <ul style={{listStyle: 'none'}}>
+          {result.data.courses.map(({title}) => (
             <li
-              key={slug}
+              key={title}
               style={{
-                display: "flex",
-                alignItems: "center",
+                display: 'flex',
+                alignItems: 'center',
                 fontSize: 16,
-                fontFamily: "sans-serif",
-                marginBottom: 10
+                fontFamily: 'sans-serif',
+                marginBottom: 10,
               }}
             >
-              <img
-                src={square_cover_url}
-                alt="course"
-                width="50"
-                height="50"
-                style={{
-                  marginRight: 10
-                }}
-              />
               {title}
             </li>
           ))}
         </ul>
       )}
     </div>
-  );
+  )
 }
 
-export default App;
+export default App
