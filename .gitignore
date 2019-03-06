@@ -1,2 +1,6 @@
+# lesson recordings
 *.screenflow
 *.mp4
+
+# env variables
+.env
