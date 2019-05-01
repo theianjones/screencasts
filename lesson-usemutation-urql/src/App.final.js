@@ -2,9 +2,9 @@ import React from 'react'
 import {useMutation} from 'urql'
 
 const addCourse = `
-  mutation addCourse($slug: String!, $title: String!) {
+  mutation addCourse($slug: String!, $title: String!){
     insert_courses(objects: {slug: $slug, title: $title}) {
-      returning{
+      returning {
         title
         slug
       }
@@ -14,15 +14,12 @@ const addCourse = `
 
 const App = () => {
   const [res, executeMutation] = useMutation(addCourse)
-
-  if (res.error) {
-    return 'Oh no!'
-  }
+  console.log({res})
 
   return (
     <button
       onClick={() =>
-        executeMutation({slug: 'a-new-course', title: 'A New Course!'})
+        executeMutation({slug: 'new-course', title: 'New Course!'})
       }
     >
       Add something!
