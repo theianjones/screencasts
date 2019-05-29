@@ -13,16 +13,10 @@ subscription subscribeToComments($course_slug: String!) {
 function App() {
   const course_slug = 'usesubscription-example'
 
-  const handleSubscription = (comments, response) =>
-    console.log({comments, response}) || [...response.comments]
-
-  const [res] = useSubscription(
-    {
-      query: commentSubscriptionQuery,
-      variables: {course_slug},
-    },
-    handleSubscription,
-  )
+  const [res] = useSubscription({
+    query: commentSubscriptionQuery,
+    variables: {course_slug},
+  })
 
   if (res.error !== undefined) {
     return <div>{res.error.message}</div>
@@ -32,10 +26,9 @@ function App() {
     return <p>No new messages</p>
   }
 
-  console.log({res})
   return (
     <div>
-      <CommentList comments={res.data} />
+      <CommentList comments={res.data.comments} />
       <CommentInput />
     </div>
   )
