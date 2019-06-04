@@ -1,0 +1,11 @@
+{
+  "name": "ians-egghead-io-screencasts",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "author": "ijones16 <jones58ian@gmail.com> (@_jonesian)",
+  "license": "MIT",
+  "workspaces": [
+    "content/*"
+  ]
+}

@@ -2,11 +2,13 @@
   "name": "lesson-usesubscription-urql",
   "version": "0.1.0",
   "private": true,
+  "devDependencies": {
+    "react-scripts": "3.0.1"
+  },
   "dependencies": {
     "graphql": "^14.3.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1",
     "subscriptions-transport-ws": "^0.9.16",
     "urql": "^1.0.5"
   },
