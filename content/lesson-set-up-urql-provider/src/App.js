@@ -1,17 +1,19 @@
 import React from 'react'
 import {useQuery} from 'urql'
 
-const courseQuery = `
-  query courses {
-    courses {
-      title
+const countriesQuery = `
+  query allCountries {
+    countries {
+      name
+      emoji
+      code
     }
   }
 `
 
 function App() {
   const [result] = useQuery({
-    query: courseQuery,
+    query: countriesQuery,
   })
 
   if (result.fetching) {
@@ -22,12 +24,12 @@ function App() {
 
   return (
     <div>
-      <h1>egghead courses</h1>
+      <h1>countries</h1>
       {result && result.data && (
         <ul style={{listStyle: 'none'}}>
-          {result.data.courses.map(({title}) => (
+          {result.data.countries.map(({name, emoji}) => (
             <li
-              key={title}
+              key={name}
               style={{
                 display: 'flex',
                 alignItems: 'center',
@@ -36,7 +38,8 @@ function App() {
                 marginBottom: 10,
               }}
             >
-              {title}
+              {name}
+              <span>{emoji}</span>
             </li>
           ))}
         </ul>

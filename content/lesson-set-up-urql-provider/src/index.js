@@ -4,7 +4,7 @@ import App from './App'
 import {createClient, Provider} from 'urql'
 
 const client = createClient({
-  url: 'https://egghead.io/graphql',
+  url: 'https://countries.trevorblades.com/',
 })
 
 ReactDOM.render(
