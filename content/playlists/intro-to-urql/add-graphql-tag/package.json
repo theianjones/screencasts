@@ -1,0 +1,30 @@
+{
+  "name": "add-graphql-tag",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "react-scripts": "3.0.1"
+  },
+  "dependencies": {
+    "graphql": "^14.3.1",
+    "graphql-tag": "^2.10.1",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "urql": "^1.1.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
+}
