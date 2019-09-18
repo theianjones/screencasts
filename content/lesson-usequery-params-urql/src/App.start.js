@@ -2,16 +2,20 @@ import React from 'react'
 import {useQuery} from 'urql'
 
 const courseQuery = `
-  query courses {
-    courses {
+  query courses($offset: Int!) {
+    courses(limit: 2, offset: $offset) {
       title
     }
   }
 `
 
 function App() {
+  const [offset, setOffset] = React.useState(0)
   const [result] = useQuery({
     query: courseQuery,
+    variables: {
+      offset,
+    },
   })
 
   if (result.fetching) {
@@ -22,6 +26,7 @@ function App() {
 
   return (
     <div>
+      <button onClick={() => setOffset(offset + 1)}>Next Page</button>
       <h1>egghead courses</h1>
       {result && result.data && (
         <ul style={{listStyle: 'none'}}>
