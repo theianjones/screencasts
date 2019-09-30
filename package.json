@@ -6,6 +6,6 @@
   "author": "ijones16 <jones58ian@gmail.com> (@_jonesian)",
   "license": "MIT",
   "workspaces": [
-    "content/*"
+    "content/playlists/intro-to-urql/*"
   ]
 }
