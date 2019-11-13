@@ -1,0 +1,4 @@
+{
+  "packages": ["content/playlists/add-graphql-tag"],
+  "sandboxes": ["new", "react"]
+}
