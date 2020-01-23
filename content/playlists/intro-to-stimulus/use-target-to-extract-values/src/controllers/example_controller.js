@@ -1,7 +1,10 @@
 import {Controller} from 'stimulus'
 
 export default class extends Controller {
+  static targets = ['name']
   greet() {
-    console.log('hello')
+    const element = this.nameTarget
+    const name = element.value
+    console.log(`hello ${name}!`)
   }
 }
