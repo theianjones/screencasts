@@ -6,6 +6,7 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "projects/*"
+    "new-react",
+    "old-react"
   ]
 }
