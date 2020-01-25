@@ -42,8 +42,8 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "old-react@workspace:old-react"
   dependencies:
-    react: ^16.0.0
-    react-dom: ^16.0.0
+    react: ^16.12.0
+    react-dom: ^16.12.0
   languageName: unknown
   linkType: soft
 
@@ -58,7 +58,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:^16.0.0, react-dom@npm:^16.12.0":
+"react-dom@npm:^16.12.0":
   version: 16.12.0
   resolution: "react-dom@npm:16.12.0"
   dependencies:
@@ -79,7 +79,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:^16.0.0, react@npm:^16.12.0":
+"react@npm:^16.12.0":
   version: 16.12.0
   resolution: "react@npm:16.12.0"
   dependencies:
