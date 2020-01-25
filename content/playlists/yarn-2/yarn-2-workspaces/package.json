@@ -1,0 +1,11 @@
+{
+  "name": "yarn-2-workspaces",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Ian Jones (https://ianjones.us)",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "projects/*"
+  ]
+}
