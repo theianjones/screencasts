@@ -3,17 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Select an Element with getElementById</title>
+    <title>Add a Node to Your HTML Document</title>
   </head>
   <body>
-    <ul>
+    <ul id="movies">
       <li id="movie-1">Peanut Butter Falcon</li>
-      <li class="active" id="movie-2">Knives Out</li>
+      <li id="movie-2">Knives Out</li>
     </ul>
+    <button>Add Uncut Gems</button>
 
     <script>
-      const knivesOut = document.getElementById('movie-2')
-      console.log({knivesOut})
+      const addMovieButton = document.querySelector('button')
+      addMovieButton.onclick = () => {
+        const moviesElem = document.getElementById('movies')
+        const uncutGems = document.createElement('li')
+        uncutGems.textContent = 'Uncut Gems'
+        moviesElem.appendChild(uncutGems)
+      }
     </script>
   </body>
 </html>
