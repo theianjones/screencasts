@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Add a Node to Your HTML Document</title>
+    <title>Add an Element to Your HTML Document with JavaScript</title>
   </head>
   <body>
     <ul id="movies">
@@ -11,15 +11,15 @@
       <li id="movie-2">Knives Out</li>
     </ul>
     <button>Add Uncut Gems</button>
-
     <script>
-      const addMovieButton = document.querySelector('button')
-      addMovieButton.onclick = () => {
-        const moviesElem = document.getElementById('movies')
+      const addMovie = () => {
         const uncutGems = document.createElement('li')
         uncutGems.textContent = 'Uncut Gems'
-        moviesElem.appendChild(uncutGems)
+        const movies = document.getElementById('movies')
+        movies.appendChild(uncutGems)
       }
+      const button = document.querySelector('button')
+      button.onclick = addMovie
     </script>
   </body>
 </html>
